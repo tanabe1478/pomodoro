@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pomodoro/pages/pages.dart';
 
 import '../providers/providers.dart';
 
 class HomePage extends ConsumerWidget {
-  const HomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  const HomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pomodoroTimer = ref.watch(pomodoroTimerProvider);
+    final title = ref.read(homePageTitleProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -16,7 +17,15 @@ class HomePage extends ConsumerWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
-            onPressed: () => {},
+            onPressed: () => {
+              showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                builder: (context) {
+                  return SettingPage();
+                },
+              ),
+            },
           ),
         ],
       ),
