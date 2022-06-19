@@ -1,16 +1,11 @@
 # pomodoro
 
-A new Flutter project.
+Flutter製のポモドーロタイマー
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+このプロジェクトはFlutter製のアプリです。
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Flutterの開発を始めるためのヘルプは、以下を参照してください。
+ - [オンラインドキュメント](https://docs.flutter.dev/)
+   - チュートリアル、サンプル、モバイル開発に関するガイダンス、および完全なAPIリファレンスを提供しています。
