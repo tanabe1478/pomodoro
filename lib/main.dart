@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pomodoro/providers/providers.dart';
 import 'package:pomodoro/theme_selector_provider.dart';
 
 void main() {
@@ -12,14 +13,13 @@ class MyApp extends ConsumerWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var watched = ref.watch(themeSelectorProvider);
-
+    String appName = ref.watch(appNameProvider);
     return MaterialApp(
       title: 'Flutter Demo',
       theme: lightThemeData,
       darkTheme: darkThemeData,
       themeMode: ref.watch(themeSelectorProvider),
-      home: const MyHomePage(title: 'Flutter Home Page'),
+      home: MyHomePage(title: appName),
     );
   }
 }
