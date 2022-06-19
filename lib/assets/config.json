@@ -1,0 +1,6 @@
+{
+  "isDebug": true,
+  "defaultMinutes": 50,
+  "defaultRestMinutes": 10,
+  "defaultLongRestMinutes": 30
+}
