@@ -19,13 +19,13 @@ class MyApp extends ConsumerWidget {
       theme: lightThemeData,
       darkTheme: darkThemeData,
       themeMode: ref.read(themeSelectorProvider),
-      home: MyHomePage(title: appName),
+      home: HomePage(title: appName),
     );
   }
 }
 
-class MyHomePage extends ConsumerWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class HomePage extends ConsumerWidget {
+  const HomePage({Key? key, required this.title}) : super(key: key);
   final String title;
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -34,6 +34,12 @@ class MyHomePage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () => {},
+          ),
+        ],
       ),
       body: Center(
         child: Column(
