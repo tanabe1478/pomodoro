@@ -5,10 +5,9 @@ import 'package:pomodoro/widgets/widgets.dart';
 
 class SettingPage extends ConsumerWidget {
   const SettingPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    throw Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text(ref.read(settingPageTitleProvider)),
       ),

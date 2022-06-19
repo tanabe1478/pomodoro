@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pomodoro/pages/pages.dart';
+import 'package:pomodoro/routes.dart';
 
 import '../providers/providers.dart';
 
@@ -18,13 +18,7 @@ class HomePage extends ConsumerWidget {
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () => {
-              showModalBottomSheet(
-                context: context,
-                isScrollControlled: true,
-                builder: (context) {
-                  return SettingPage();
-                },
-              ),
+              Navigator.of(context).pushNamed(RoutePath.setting.name),
             },
           ),
         ],
